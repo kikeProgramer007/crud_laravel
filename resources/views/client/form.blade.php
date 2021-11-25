@@ -40,14 +40,14 @@
             <p class="form-text text-danger"> {{$message}}</p>
             @enderror
         </div>
-
+        <a href="{{route('client.index')}}" class="btn btn-primary">regresar</a>
         {{-- CONDICIONAL PARA MOSTRAR EL EDIT Y EL CREATE --}}
         @if (isset($client))
-            <button type="submit" class="btn btn-success">Guardar modificación</button>
+            <button type="submit" class="btn btn-success">Guardar</button>
         @else
-            <button type="submit" class="btn btn-success">Guardar cliente</button>
+            <button type="submit" class="btn btn-success">Guardar</button>
         @endif
-        
+       
     </form>
 
 </div>

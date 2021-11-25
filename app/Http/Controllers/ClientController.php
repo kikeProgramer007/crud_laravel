@@ -15,7 +15,7 @@ class ClientController extends Controller
      */
     public function index()
     {   
-        $clients = Client::paginate(5);
+        $clients = Client::paginate(100);//se coloca parametro para la cantidad de datos para traer
         return view('client.index')->with('clients', $clients);
        
     }
@@ -39,7 +39,7 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre'=>'required|max:15',
+            'nombre'=>'required|max:30',
             'deuda'=>'required|gte:1',
             'comentario'=>'required'
         ]);
@@ -81,7 +81,7 @@ class ClientController extends Controller
     public function update(Request $request, Client $client)
     {
         $request->validate([
-            'nombre'=>'required|max:15',
+            'nombre'=>'required|max:30',
             'deuda'=>'required|gte:1',
             'comentario'=>'required'
         ]);
