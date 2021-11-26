@@ -25,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap(); //USAR PAGINACION DE TABLA PARA LARVEL 8
+        Paginator::useTailwind();
     }
 }

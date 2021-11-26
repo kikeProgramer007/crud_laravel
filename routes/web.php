@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;  //INCLUIR EL CONTROLLER
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('client', ClientController::class);
+Route::resource('product', ProductController::class);
