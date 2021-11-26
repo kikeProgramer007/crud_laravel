@@ -103,4 +103,11 @@ class ProductController extends Controller
         session::flash('mensaje','Registro eliminado con exito!');//crea un avarible de session para almacenar ese mensaje
         return redirect()->route('product.index');
     }
+
+    public function eliminar( Product $product){
+        
+        $product->delete();
+        session::flash('mensaje','Registro eliminado con exito!');
+       return redirect()->to(asset('product'));
+    }
 }

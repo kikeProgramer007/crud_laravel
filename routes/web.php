@@ -21,3 +21,4 @@ Route::get('/', function () {
 
 Route::resource('client', ClientController::class);
 Route::resource('product', ProductController::class);
+Route::get('product/eliminar/{product}', [ProductController::class, 'eliminar']);

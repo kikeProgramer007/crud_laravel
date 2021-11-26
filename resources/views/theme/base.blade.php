@@ -45,8 +45,8 @@
   $(document).ready(function() {
   $('#example').DataTable( {
       responsive: true,
-      order: [[0, 'asc']],
-      "lengthMenu": [[05 ,10, 25, 50, 100], [05 ,10, 25, 50, 100]]
+      order: [[0, 'asc']]
+    
       // rowGroup: {
       //     dataSrc: 2
       // }
