@@ -108,6 +108,6 @@ class ProductController extends Controller
         
         $product->delete();
         session::flash('mensaje','Registro eliminado con exito!');
-       return redirect()->to(asset('product'));
+        return redirect()->route('product.index');
     }
 }
